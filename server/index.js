@@ -10,8 +10,10 @@ app.use(express.urlencoded({ extended: false }));
 const itemsRoutes = require("./routes/items");
 app.use("/api/items", itemsRoutes);
 
-// Puerto de escucha
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Servidor escuchando en el puerto ${port}`);
-});
+// // Puerto de escucha
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log(`Servidor escuchando en el puerto ${port}`);
+// });
+
+module.exports = app;
