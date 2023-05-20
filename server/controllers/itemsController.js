@@ -59,8 +59,8 @@ async function getItemById(req, res) {
       // Estructura los datos en el formato especificado
       const result = {
         author: {
-          name: "Nombre del autor",
-          lastname: "Apellido del autor",
+          name: "Elisa",
+          lastname: "Mosquera",
         },
         item: {
           id: itemData.id,
@@ -81,7 +81,7 @@ async function getItemById(req, res) {
       res.json(result);
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "Ocurrió un error en el servidor" });
+      res.status(500).json({ error: "Ocurrio un error en el servidor" });
     }
 }
 
