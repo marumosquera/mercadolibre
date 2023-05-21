@@ -8,20 +8,21 @@ export const ItemDetail = ({ product }) => {
   return (
     <div className="item-detail-container">
       <div className="item-detail-info">
-        <div>
+        <div className="item-img-container">
           <img src={picture} alt={title} />
         </div>
-        <div>
-          <div>
+        <div className="item-detail-info-container">
+          <div className="item-detail-info-status">
             <span>{condition}</span>
             <span>|</span>
             <span> {sold_quantity} vendidos </span>
           </div>
           <h1>{title}</h1>
-          <div>
+          <div className="item-detail-info-price">
             <span>$</span>
             <span>{price.amount}</span>
           </div>
+          <button type="submit"> Comprar ahora </button>
         </div>
       </div>
       <div className="item-detail-description">

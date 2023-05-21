@@ -1,3 +1,62 @@
 @import "variables";
 @import "mixins";
 
+.item-detail-container {
+  padding: 2%;
+  @include main-container;
+  .item-detail-info {
+    width: 100%;
+    display: flex;
+    .item-img-container {
+      width: 70%;
+      min-height: 500px;
+      img {
+        width: 100%;
+        height: fit-content;
+      }
+    }
+    .item-detail-info-container {
+      width: 30%;
+      h1{
+        font-size: 22px;
+        line-height: 1.18;
+      }
+      .item-detail-info-status {
+        color: rgba(0, 0, 0, 0.55);
+        font-size: 14px;
+        font-weight: 400;
+        white-space: pre-wrap;
+        span:nth-child(2) {
+            margin: 0px 5px 5px;
+          }
+      }
+      .item-detail-info-price{
+        @include product-price;
+      }
+      button {
+        @include button-styles;
+        margin-top: 25%;
+      }
+    }
+  }
+  .item-detail-description {
+    width: 70%;
+    h3 {
+      margin-top: 7%;
+      font-size: 24px;
+      font-weight: 400;
+      padding-bottom: 24px;
+    }
+    p {
+      @include product-descriiption;
+    }
+    &::before {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      content: "";
+      display: block;
+      height: 1px;
+      margin: 40px 0;
+      width: 90%;
+    }
+  }
+}
