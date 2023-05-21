@@ -1,0 +1,15 @@
+@import "variables";
+@import "mixins";
+
+
+.alert-container{
+    display: flex;
+    justify-content: center;
+
+    padding: 42px 40px 32px;
+    @include main-container;
+    img{
+        width: 120px;
+        margin-right: 50px;
+    }
+}

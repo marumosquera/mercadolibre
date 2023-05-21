@@ -1,15 +1,23 @@
 body {
   margin: 0;
-  font-family:  "Proxima Nova Light", "Roboto Light", Arial, sans-serif, sans-serif, -apple-system, BlinkMacSystemFont;
+  font-family: "Proxima Nova", "Roboto Light", Arial, sans-serif,
+    sans-serif, -apple-system, BlinkMacSystemFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  background-color: #ededed;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova"),
+    url("./fonts/Proxima-Nova-Font.otf") format("truetype");
+}
+
 
 @font-face {
   font-family: "Proxima Nova Light";
@@ -23,7 +31,6 @@ code {
     url("./fonts/proximanova-regular.otf") format("truetype");
 }
 
-
 @font-face {
   font-family: "Proxima Nova Thin";
   src: local("Proxima Nova Thin"),
@@ -32,8 +39,7 @@ code {
 
 @font-face {
   font-family: "Roboto Light";
-  src: local("Roboto Light"),
-    url("./fonts/Roboto-Light.ttf") format("truetype");
+  src: local("Roboto Light"), url("./fonts/Roboto-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -44,6 +50,5 @@ code {
 
 @font-face {
   font-family: "Roboto Thin";
-  src: local("Roboto Thin"),
-    url("./fonts/Roboto-Thin.ttf") format("truetype");
+  src: local("Roboto Thin"), url("./fonts/Roboto-Thin.ttf") format("truetype");
 }

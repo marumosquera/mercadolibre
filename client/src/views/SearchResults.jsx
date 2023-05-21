@@ -1,9 +1,10 @@
-import React from 'react'
-import { ItemListContainer } from '../components/ItemListContainer'
+import React from 'react';
+import { ItemListContainer } from '../components/ItemListContainer';
+import "../styles/SearchResults.scss";
 
 export const SearchResults = () => {
   return (
-    <div>
+    <div className='result-container'>
       <ItemListContainer/>
     </div>
   )

@@ -38,7 +38,7 @@
     text-align: left;
     letter-spacing: normal;
     color: $primary-font-color;
-    font-weight: 300;
+    font-weight: 100;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
@@ -51,6 +51,15 @@
     line-height: 1.25;
     text-align: left;
     letter-spacing: normal;
-    color: $primary-font-color;
+    color: $primary-font-color;   
     font-weight: 400;
+}
+
+@mixin main-container{
+    width: 885px;
+    height: max-content;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #FFFFFF;
+    margin: 48px auto;
+    
 }

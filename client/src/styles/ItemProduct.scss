@@ -1,0 +1,36 @@
+@import "variables";
+@import "mixins";
+
+.item-product {
+  display: flex;
+  padding: 20px 50px 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  .item-product-image {
+    font-size: 1px;
+    height: 160px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 24px;
+    width: 160px;
+    img {
+        width: inherit;
+    }
+  }
+  .item-product-details {
+    h2 {
+      @include item-title;
+    }
+    .item-product-price {
+      @include item-price;
+    }
+    .free-shipping{
+      color: $free-shipping-font-color;
+      flex-shrink: 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+    }
+  }
+
+}
