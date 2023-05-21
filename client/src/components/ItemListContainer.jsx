@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { getProductsFromSearch } from "../services/searchServices";
 import { ItemList } from "./ItemList";
-import "../styles/ItemListContainer.scss";
 import { AlertContainer } from "./AlertContainer";
 import warning from "../assets/warning.png";
 
