@@ -1,7 +1,8 @@
 import React from 'react';
-import './NavBar.scss'; 
-import mercadolibre from '../../assets/mercadolibre.png';
-import {TfiSearch} from 'react-icons/tfi'
+import '../styles/NavBar.scss'; 
+import mercadolibre from '../assets/mercadolibre.png';
+import { SearchBar } from './SearchBar';
+
 
 export const NavBar = () => {
   return (
@@ -10,8 +11,7 @@ export const NavBar = () => {
       <img src={mercadolibre} alt="Mercado Libre"/>
     </div>
     <div className="navbar-search">
-      <input type="text" placeholder="Buscar"/>
-      <button type="submit"> <TfiSearch/> </button>
+      <SearchBar placeholder={"Buscar productos, marcas y más..."}/>
     </div>
   </nav>
   

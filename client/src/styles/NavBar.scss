@@ -1,0 +1,26 @@
+@import "variables";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-color;
+  display: grid;
+  grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
+  grid-template-rows: 40px 28px;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+  grid-column-gap: 24px;
+  row-gap: 12px;
+  padding-left: 116px;
+  padding-right: 116px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+
+  .navbar-logo img {
+    height: 34px;
+    width: 134px;
+  }
+
+}

@@ -1,0 +1,56 @@
+@import "variables";
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+  
+@mixin button-styles {
+    background-color: $primary-btn-color;
+    color: #FFFFFF;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+    border: none;
+    border-radius: 6px;
+    font-size: $primary-font-size;
+    cursor: pointer;
+}
+
+@mixin description-product {
+    color: #666666;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: start;
+    letter-spacing: normal;
+}
+
+@mixin product-title{
+    font-size: 20px;
+    line-height: 25.96px;
+    text-align: start;
+    letter-spacing: normal;
+    color: black;
+}
+
+@mixin item-title{
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: normal;
+    color: $primary-font-color;
+    font-weight: 300;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+@mixin item-price{
+    font-size: 24px;
+    line-height: 1.25;
+    text-align: left;
+    letter-spacing: normal;
+    color: $primary-font-color;
+    font-weight: 400;
+}
