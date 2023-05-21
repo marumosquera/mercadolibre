@@ -21,7 +21,7 @@ class Http {
 
   initHttp() {
     const http = axios.create({
-      baseURL: process.env.SERVER_ENDPOINT_URL,
+      baseURL: "https://mercadolibre-one.vercel.app/",
       headers,
     });
    
