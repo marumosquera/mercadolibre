@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Middleware para habilitar CORS
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:3000, https://mercadolibre-mosquera.vercel.app/');
+  res.header('Access-Control-Allow-Origin', process.env.CORS_URL);
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
