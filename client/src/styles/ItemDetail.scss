@@ -8,15 +8,16 @@
     width: 100%;
     display: flex;
     .item-img-container {
-      width: 70%;
+      width: 66%;
       min-height: 500px;
+      padding: 1em;
       img {
         width: 100%;
-        height: fit-content;
+        height: max-content;
       }
     }
     .item-detail-info-container {
-      width: 30%;
+      width: 33%;
       h1{
         font-size: 22px;
         line-height: 1.18;
@@ -40,7 +41,7 @@
     }
   }
   .item-detail-description {
-    width: 70%;
+    width: 66%;
     h3 {
       margin-top: 7%;
       font-size: 24px;

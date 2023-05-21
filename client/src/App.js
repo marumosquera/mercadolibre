@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/search" element={<SearchResults />} />
+          <Route path="/search/:query" element={<SearchResults />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </div>

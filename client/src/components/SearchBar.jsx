@@ -1,13 +1,57 @@
-import React from 'react';
-import {TfiSearch} from 'react-icons/tfi';
-import '../styles/SearchBar.scss';
+import React, { useState } from "react";
+import { TfiSearch } from "react-icons/tfi";
+import "../styles/SearchBar.scss";
+import { useNavigate } from "react-router-dom";
 
+export const SearchBar = ({ placeholder }) => {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
 
-export const SearchBar = ({placeholder}) => {
+  const handleSearchInput = (value) => {
+    setSearch(value.toLowerCase());
+  };
+
+  const handleInputPaste = (e) => {
+    const value = e.clipboardData.getData("Text");
+    handleSearchInput(value);
+  };
+
+  const handleInput = (e) => {
+    const value = e.target.value;
+    if (e.type === "paste") {
+      handleInputPaste(e);
+    } else {
+      handleSearchInput(value);
+    }
+  };
+
+  const handleSearchQuery = (e) => {
+    e.preventDefault();
+    if (search.trim() !== "") {
+      navigate(`/search/${search}`);
+    } 
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearchQuery(e);
+    }
+  };
+
   return (
-    <div className='search'>
-      <input type="text" placeholder={placeholder}/>
-      <button type="submit"> <TfiSearch/> </button>
+    <div className="search">
+      <form onSubmit={handleSearchQuery}>
+        <input
+          type="text"
+          placeholder={placeholder}
+          value={search}
+          onChange={handleInput}
+          onKeyPress={handleKeyPress}
+        />
+        <button type="submit" onClick={handleSearchQuery}>
+          <TfiSearch />
+        </button>
+      </form>
     </div>
-  )
-}
+  );
+};

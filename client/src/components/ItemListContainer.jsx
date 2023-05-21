@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useEffect } from "react";
 import { getProductsFromSearch } from "../services/searchServices";
 import { ItemList } from "./ItemList";
 import { AlertContainer } from "./AlertContainer";
 import warning from "../assets/warning.png";
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const { query } = useParams();
 
   async function productsFromSearch() {
-    const query = "ipad";
     try {
       const api_response = await getProductsFromSearch(query);
       const items = api_response.data.items;
@@ -28,7 +29,7 @@ export const ItemListContainer = () => {
 
   useEffect(() => {
     productsFromSearch();
-  }, []);
+  }, [query]);
 
   return (
     <div>
