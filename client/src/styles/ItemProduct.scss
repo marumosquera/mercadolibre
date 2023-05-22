@@ -5,6 +5,9 @@
   display: flex;
   padding: 2% 5% 2% 0;
   border-bottom: 1px solid #e6e6e6;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   .item-product-image {
     font-size: 1px;
     height: 160px;
@@ -12,10 +15,16 @@
     overflow: hidden;
     padding: 0 24px;
     width: 160px;
+    @media (max-width: 768px) {
+      height: fit-content;
+      margin: auto;
+      width: 25%;
+    }
     img {
         width: inherit;
         @media (max-width: 768px) {
-          width: 100%;    
+          width: 80px; 
+          height: min-content;   
         }
       
     }
@@ -23,6 +32,9 @@
   .item-product-details {
     h2 {
       @include item-title;
+      @media (max-width: 768px) {
+        width: 95%;  
+      }
     }
     .item-product-price {
       @include item-price;
@@ -34,6 +46,9 @@
       font-weight: 600;
       line-height: 1.5;
       letter-spacing: 0.5px;
+    }
+    @media (max-width: 768px) {
+      width: 70%;
     }
   }
 
