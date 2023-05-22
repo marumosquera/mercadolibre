@@ -75,6 +75,7 @@ async function getItemById(req, res) {
           free_shipping: itemData.shipping.free_shipping,
           sold_quantity: itemData.sold_quantity,
           description: descriptionData.plain_text,
+          categoryId: itemData.category_id
         },
       };
   
