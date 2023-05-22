@@ -17,10 +17,20 @@
   padding-right: 116px;
   padding-top: 8px;
   padding-bottom: 12px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;  // Cambia a una sola columna
+    padding-left: 16px;  // Ajusta el padding lateral
+    padding-right: 16px;
+    justify-content: center; 
+   
+  }
 
   .navbar-logo img {
     height: 34px;
     width: 134px;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
   }
 
 }
