@@ -5,7 +5,7 @@ import { ItemList } from "./ItemList";
 import { AlertContainer } from "./AlertContainer";
 import warning from "../assets/warning.png";
 import { useParams } from "react-router-dom";
-import {Breadcrumb} from "./Breadcrumb";
+import {BreadcrumbSearch} from "./BreadcrumbSearch";
 import { CategoryContext } from "../context/CategoryContext.jsx";
 
 export const ItemListContainer = () => {
@@ -37,8 +37,8 @@ export const ItemListContainer = () => {
       {!isLoading ? (
         products.length > 0 ? (
           <>
-            <Breadcrumb categories={categories} />
-            <ItemList products={products} />
+            <BreadcrumbSearch categories={categories} />
+            <ItemList products={products} query={query} />
           </>
         ) : (
           <AlertContainer

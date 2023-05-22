@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Breadcrumb.scss";
 import { BreadcrumbList } from "./BreadcrumbList";
 
-export const Breadcrumb = ({ categories }) => {
+export const BreadcrumbSearch = ({ categories }) => {
   return (
     <div className="breadcrumb" itemType="https://schema.org/BreadcrumbList">
       {categories.map((category, index) => {

@@ -2,12 +2,12 @@ import React from "react";
 import "../styles/ItemProduct.scss";
 import {Link} from 'react-router-dom';
 
-export const ItemProduct = ({ product}) => {
+export const ItemProduct = ({ product, query}) => {
   const { title, price, picture, id, free_shipping } = product;
 
   return (
 
-    <Link to={`/product/${id}`}>
+    <Link to={`/product/${query}/${id}`}>
     <div className="item-product">
       <div className="item-product-image">
         <img src={picture} alt={title} />

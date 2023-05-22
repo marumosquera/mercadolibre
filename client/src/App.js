@@ -15,7 +15,7 @@ function App() {
         <CategoryProvider>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/product/:query/:id" element={<ProductDetails />} />
             <Route path="/search/:query" element={<SearchResults />} />
             <Route path="/*" element={<ErrorPage />} />
           </Routes>

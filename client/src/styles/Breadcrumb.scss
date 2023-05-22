@@ -1,3 +1,5 @@
+@import "variables";
+
 .breadcrumb {
   display: flex;
   position: absolute;
@@ -15,11 +17,52 @@
     line-height: 20.3px;
     letter-spacing: normal;
     text-align: start;
-    color: #666;
+    color: $secondary-font-color;
     margin-right: 5px;
     cursor: pointer;
         &:hover{
             color: black;
         }
+    span:nth-child(2){
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px;
+      font-size: 9px;
+    }
   }
+}
+
+.breadcrumb-product {
+  display: flex;
+  list-style-type: none;
+  font-weight: 400;
+  align-items: center;
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 9%;
+  }
+  li {
+    align-items: center;
+    margin-right: 2px;
+    span:nth-child(1){
+      font-size: 14px;
+      line-height: 20.3px;
+      letter-spacing: normal;
+      text-align: start;
+      color: $link-font-color;
+      
+      
+      cursor: pointer;
+          &:hover{
+              color: $visited-link-font-color;
+          }
+    }
+    span:nth-child(2){
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px;
+      font-size: 9px;
+    }
+    }
+  
 }

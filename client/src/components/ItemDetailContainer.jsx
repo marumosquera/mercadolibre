@@ -2,22 +2,21 @@ import React, { useEffect, useState, useContext } from "react";
 import { getProductById } from "../services/productServices.js";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail.jsx";
-import { CategoryContext } from "../context/CategoryContext.jsx";
-import { Breadcrumb } from "./Breadcrumb.jsx";
+import { BreadcrumbProduct} from "./BreadcrumbProduct.jsx";
 import "../styles/ItemDetailContainer.scss";
+import { useNavigate } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [product, setProduct] = useState({});
-  const { id } = useParams();
-  const { categories } = useContext(CategoryContext);
+  const { id, query } = useParams();
+  const navigate = useNavigate();
 
   async function productById() {
     try {
       const api_response = await getProductById(id);
       const item = api_response.data.item;
       setProduct(item);
-      console.log(api_response.data.item);
     } catch (err) {
       console.log(err);
     } finally {
@@ -25,16 +24,20 @@ export const ItemDetailContainer = () => {
     }
   }
 
+  const goBackToQuery = () => {
+    navigate(`/search/${query}`);
+  };
+
   useEffect(() => {
     productById();
   }, []);
   return (
     <>
       {!isLoading && (
-        <div>
+        <div className="item-detail-container">
           <div className="item-detail-listado">
-            <span>Volver al listado | </span>
-            <Breadcrumb categories={categories} />
+            <span className="span-listado-breadcrumb" onClick={goBackToQuery}>Volver al listado </span>
+            <BreadcrumbProduct categoryId={product.categoryId}/>
           </div>
           <ItemDetail product={product} />
         </div>
