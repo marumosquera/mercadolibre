@@ -5,18 +5,21 @@ import { ErrorPage } from "./views/ErrorPage";
 import { Home } from "./views/Home";
 import { ProductDetails } from "./views/ProductDetails";
 import { SearchResults } from "./views/SearchResults";
+import CategoryProvider from "./context/CategoryContext";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/search/:query" element={<SearchResults />} />
-          <Route path="/*" element={<ErrorPage />} />
-        </Routes>
+        <CategoryProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/search/:query" element={<SearchResults />} />
+            <Route path="/*" element={<ErrorPage />} />
+          </Routes>
+        </CategoryProvider>
       </div>
     </BrowserRouter>
   );

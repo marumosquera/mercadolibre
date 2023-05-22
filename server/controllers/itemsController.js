@@ -85,7 +85,36 @@ async function getItemById(req, res) {
     }
 }
 
+// Controlador para /api/categories/:id
+async function getCategoriesById(req, res) {
+  const categoriesId = req.params.id;
+  try {
+    // Consulta el endpoint para obtener los detalles del producto
+    const categoriesResponse = await axios.get(`https://api.mercadolibre.com/categories/${categoriesId}`);
+    const categoriesData = categoriesResponse.data;
+
+    // Estructura los datos en el formato especificado
+    const result = {
+      author: {
+        name: "Elisa",
+        lastname: "Mosquera",
+      },
+      categories: {
+        id: categoriesData.id,
+        title: categoriesData.name,
+        categories: categoriesData.path_from_root
+      },
+    };
+
+    res.json(result);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Ocurrio un error en el servidor" });
+  }
+}
+
 module.exports = {
   searchItems,
   getItemById,
+  getCategoriesById
 };

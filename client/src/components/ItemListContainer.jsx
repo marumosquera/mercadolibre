@@ -6,11 +6,12 @@ import { AlertContainer } from "./AlertContainer";
 import warning from "../assets/warning.png";
 import { useParams } from "react-router-dom";
 import {Breadcrumb} from "./Breadcrumb";
+import { CategoryContext } from "../context/CategoryContext.jsx";
 
 export const ItemListContainer = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const {setCategories, categories} = useContext(CategoryContext);
   const { query } = useParams();
 
   async function productsFromSearch() {
@@ -20,7 +21,6 @@ export const ItemListContainer = () => {
       const productCategories = api_response.data.categories;
       setProducts(items);
       setCategories(productCategories);
-      console.log(api_response.data);
     } catch (err) {
       console.log(err);
     } finally {
