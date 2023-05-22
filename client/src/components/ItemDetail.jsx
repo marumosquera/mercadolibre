@@ -6,7 +6,8 @@ export const ItemDetail = ({ product }) => {
     product;
 
   return (
-    <div className="item-detail-container">
+    <>
+        <div className="item-detail-container">
       <div className="item-detail-info">
         <div className="item-img-container">
           <img src={picture} alt={title} />
@@ -30,5 +31,7 @@ export const ItemDetail = ({ product }) => {
         <p>{description}</p>
       </div>
     </div>
+    </>
+
   );
 };
