@@ -19,8 +19,8 @@ app.use(function(req, res, next) {
 });
 
 // Rutas
-const itemsRoutes = require("./routes/items");
-app.use("/api/items", itemsRoutes);
+const apiRoutes = require("./routes/api");
+app.use("/api", apiRoutes);
 
 // Puerto de escucha
 const port = process.env.PORT || 3000;
