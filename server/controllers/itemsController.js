@@ -33,7 +33,7 @@ async function searchItems(req, res) {
         name: "Elisa",
         lastname: "Mosquera",
       },
-      categories: [categories],
+      categories: categories,
       items: items,
     };
 

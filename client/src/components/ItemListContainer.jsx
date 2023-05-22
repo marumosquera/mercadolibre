@@ -5,6 +5,7 @@ import { ItemList } from "./ItemList";
 import { AlertContainer } from "./AlertContainer";
 import warning from "../assets/warning.png";
 import { useParams } from "react-router-dom";
+import {Breadcrumb} from "./Breadcrumb";
 
 export const ItemListContainer = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +36,10 @@ export const ItemListContainer = () => {
     <div>
       {!isLoading ? (
         products.length > 0 ? (
-          <ItemList products={products} />
+          <>
+            <Breadcrumb categories={categories} />
+            <ItemList products={products} />
+          </>
         ) : (
           <AlertContainer
             image={warning}

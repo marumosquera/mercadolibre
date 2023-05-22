@@ -1,11 +1,20 @@
+.breadcrumb {
+  display: block;
+  position: absolute;
+  top: 16%;
 
-.breadcrumb{
-    span{
-        font-size: 14px;
-        line-height: 20.3px;
-        letter-spacing: normal;
-        text-align: start;
-        color: #666;
-    }
- 
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 9%;
+  }
+  li {
+    font-size: 14px;
+    line-height: 20.3px;
+    letter-spacing: normal;
+    text-align: start;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.45;
+    margin: 0 0 16px;
+  }
 }

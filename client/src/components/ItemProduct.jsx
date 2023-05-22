@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/ItemProduct.scss";
 import {Link} from 'react-router-dom';
 
-export const ItemProduct = ({ product, key }) => {
+export const ItemProduct = ({ product}) => {
   const { title, price, picture, id, free_shipping } = product;
 
   return (
