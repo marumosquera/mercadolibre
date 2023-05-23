@@ -7,8 +7,6 @@
   display: grid;
   grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
   grid-template-rows: 40px 28px;
-  -webkit-column-gap: 24px;
-  -moz-column-gap: 24px;
   column-gap: 24px;
   grid-column-gap: 24px;
   row-gap: 12px;
@@ -20,15 +18,12 @@
   @media (max-width: 768px) {
     justify-content: center;
     display: flex;
-  }
-  @media (max-width: 375px) {
-    display: flex;
-    justify-content: center;
     padding-left: 0px;
     padding-right: 0px;
     column-gap: 0px;
     grid-column-gap: 0px;
-    row-gap: 0px;
+    row-gap: 0px;  
+    align-items: flex-end;
   }
 
   .navbar-logo {
@@ -39,6 +34,7 @@
       @media (max-width: 768px) {
         height: 34px;
         width: 60px;
+        margin-right: 3px;
       }
       @media (max-width: 375px) {
         display: none;

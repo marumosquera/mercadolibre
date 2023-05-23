@@ -25,9 +25,10 @@
         height: 12px;
         background-color: black;
         margin: 0 5px 0 5px;
-        @media (max-width: 768px) {
-          display: none;
-        }
+       
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }

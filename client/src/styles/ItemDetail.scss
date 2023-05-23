@@ -35,10 +35,11 @@
     }
     .item-detail-info-container {
       width: 33%;
-      
+
       @media (max-width: 768px) {
         width: 100%;
         min-height: fit-content;
+        margin-top: 10%;
       }
       h1 {
         font-size: 22px;
