@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { getProductById } from "../services/productServices.js";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail.jsx";
-import { BreadcrumbProduct} from "./BreadcrumbProduct.jsx";
+import { BreadcrumbProduct } from "./BreadcrumbProduct.jsx";
 import "../styles/ItemDetailContainer.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -34,12 +34,16 @@ export const ItemDetailContainer = () => {
   return (
     <>
       {!isLoading && (
-        <div className="item-detail-container">
+        <div >
           <div className="item-detail-listado">
-            <span className="span-listado-breadcrumb" onClick={goBackToQuery}>Volver al listado </span>
-            <BreadcrumbProduct categoryId={product.categoryId}/>
+            <span className="span-listado-breadcrumb" onClick={goBackToQuery}>
+              Volver al listado{" "}
+            </span>
+            <BreadcrumbProduct categoryId={product.categoryId} />
           </div>
-          <ItemDetail product={product} />
+          <div className="item-detail-container">
+            <ItemDetail product={product} />
+          </div>
         </div>
       )}
     </>

@@ -5,13 +5,17 @@ import { ItemList } from "./ItemList";
 import { AlertContainer } from "./AlertContainer";
 import warning from "../assets/warning.png";
 import { useParams } from "react-router-dom";
-import {BreadcrumbSearch} from "./BreadcrumbSearch";
+import { BreadcrumbSearch } from "./BreadcrumbSearch";
 import { CategoryContext } from "../context/CategoryContext.jsx";
+import { Pagination } from "./Pagination";
+import "../styles/ItemListContainer.scss";
 
 export const ItemListContainer = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
-  const {setCategories, categories} = useContext(CategoryContext);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(4);
+  const { setCategories, categories } = useContext(CategoryContext);
   const { query } = useParams();
 
   async function productsFromSearch() {
@@ -32,13 +36,32 @@ export const ItemListContainer = () => {
     productsFromSearch();
   }, [query]);
 
+  // Get current products
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div>
       {!isLoading ? (
         products.length > 0 ? (
           <>
             <BreadcrumbSearch categories={categories} />
-            <ItemList products={products} query={query} />
+            <div className="result-container">
+              <ItemList products={currentProducts} query={query} />
+            </div>
+            <Pagination
+              productsPerPage={productsPerPage}
+              totalProducts={products.length}
+              paginate={paginate}
+              currentPage={currentPage}
+            />
           </>
         ) : (
           <AlertContainer

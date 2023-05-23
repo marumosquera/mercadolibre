@@ -1,0 +1,17 @@
+@import "variables";
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  li {
+    margin: 1%;
+    a {
+      cursor: pointer;
+      &:hover {
+        color: $link-font-color;
+      }
+    }
+  }
+}

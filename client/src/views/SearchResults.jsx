@@ -1,11 +1,6 @@
-import React from 'react';
-import { ItemListContainer } from '../components/ItemListContainer';
-import "../styles/SearchResults.scss";
+import React from "react";
+import { ItemListContainer } from "../components/ItemListContainer";
 
 export const SearchResults = () => {
-  return (
-    <div className='result-container'>
-      <ItemListContainer/>
-    </div>
-  )
-}
+  return <ItemListContainer />;
+};

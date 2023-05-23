@@ -1,7 +1,6 @@
 @import "variables";
 
 .navbar {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $primary-color;
@@ -22,6 +21,15 @@
     justify-content: center;
     display: flex;
   }
+  @media (max-width: 375px) {
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    column-gap: 0px;
+    grid-column-gap: 0px;
+    row-gap: 0px;
+  }
 
   .navbar-logo {
     .nav-logo-mobile {
@@ -31,6 +39,9 @@
       @media (max-width: 768px) {
         height: 34px;
         width: 60px;
+      }
+      @media (max-width: 375px) {
+        display: none;
       }
     }
     .nav-logo-desktop {
