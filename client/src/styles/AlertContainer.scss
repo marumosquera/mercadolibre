@@ -7,11 +7,17 @@
   padding: 42px 40px 32px;
   @include main-container;
   @media (max-width: 768px) {
-    width: 90%;
+    display: block;
+    width: 80%;
     min-height: fit-content;
     padding: 4% 4% 3% 3%;
-    font-size: 10%;
     line-height: 1.2;
+    text-align: center;
+    .alert-info{
+      li{
+        margin-top: 2%;
+      }
+    }
   }
   img {
     width: 120px;
@@ -20,6 +26,8 @@
       width: 20%;
       height: 20%;
       margin-right: 2%;
+      display: block;
+      margin: auto;
     }
   }
 }
