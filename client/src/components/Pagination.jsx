@@ -1,5 +1,5 @@
 import React from "react";
-import {IoIosArrowForward, IoIosArrowBack} from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import "../styles/Pagination.scss";
 
 export const Pagination = ({
@@ -19,17 +19,25 @@ export const Pagination = ({
       <ul className="pagination-list">
         {currentPage > 1 && (
           <a onClick={() => paginate(currentPage - 1)}>
-            <IoIosArrowBack/>
+            <IoIosArrowBack />
           </a>
         )}
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
-            <a onClick={() => paginate(number)}>{number}</a>
+            {console.log("num", currentPage === number)}
+            <a
+              onClick={() => paginate(number)}
+              className={`${
+                currentPage === number ? "active-page" : "inactive-page"
+              }`}
+            >
+              {number}
+            </a>
           </li>
         ))}
         {currentPage < totalProducts / productsPerPage && (
           <a onClick={() => paginate(currentPage + 1)}>
-         <IoIosArrowForward/>
+            <IoIosArrowForward />
           </a>
         )}
       </ul>

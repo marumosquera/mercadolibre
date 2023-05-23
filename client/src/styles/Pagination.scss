@@ -12,6 +12,9 @@
       &:hover {
         color: $link-font-color;
       }
+      .active-page {
+        color: $visited-link-font-color;
+      }
     }
   }
 }
