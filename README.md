@@ -1,6 +1,8 @@
 # Proyecto de Clon de Mercado Libre
 Este es un proyecto de clon de Mercado Libre, una aplicación web que consta de una caja de búsqueda, la visualización de resultados y la descripción del detalle del producto. El proyecto se desarrolla utilizando tecnologías  ReactJS, Node.js y Express.
 
+Deploy frontend: https://mercadolibre-mosquera.vercel.app/
+
 ![Gif funcionamiento](/readmeAssets/MELI.gif)
 
 ## Endpoints
@@ -41,3 +43,11 @@ También se proporciona la funcionalidad de ingresar directamente a la vista de 
 3. Iniciar el servidor ejecutando npm run start.
     - Correr el front en el PORT 3000.
 4. Abrir el navegador y acceder a http://localhost:3000 para ver la aplicación en funcionamiento.
+
+Aclaracion: el frontend se encuentra configurado para llamar al URL endpoint del backend deployado en: https://mercadolibre-one.vercel.app/
+
+
+## Deployment links
+
+Deploy frontend: https://mercadolibre-mosquera.vercel.app/
+Deploy backend: https://mercadolibre-one.vercel.app/

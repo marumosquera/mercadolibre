@@ -9,7 +9,6 @@ const CategoryProvider = ({children}) => {
         categories, setCategories
     }
 
-    console.log(categories)
     return(
         <CategoryContext.Provider value={data}>
             {children}
