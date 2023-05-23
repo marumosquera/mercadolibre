@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { getProductsFromSearch } from "../services/searchServices";
 import { ItemList } from "./ItemList";
@@ -6,7 +6,6 @@ import { AlertContainer } from "./AlertContainer";
 import warning from "../assets/warning.png";
 import { useParams } from "react-router-dom";
 import { BreadcrumbSearch } from "./BreadcrumbSearch";
-import { CategoryContext } from "../context/CategoryContext.jsx";
 import { Pagination } from "./Pagination";
 import "../styles/ItemListContainer.scss";
 
@@ -15,7 +14,7 @@ export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(4);
-  const { setCategories, categories } = useContext(CategoryContext);
+  const [categories, setCategories] = useState([])
   const { query } = useParams();
 
   async function productsFromSearch() {
