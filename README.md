@@ -1,5 +1,18 @@
 # Proyecto de Clon de Mercado Libre
-Este es un proyecto de clon de Mercado Libre, una aplicación web que consta de una caja de búsqueda, la visualización de resultados y la descripción del detalle del producto. El proyecto se desarrolla utilizando tecnologías como React, Node.js y Express.
+Este es un proyecto de clon de Mercado Libre, una aplicación web que consta de una caja de búsqueda, la visualización de resultados y la descripción del detalle del producto. El proyecto se desarrolla utilizando tecnologías  ReactJS, Node.js y Express.
+
+![Gif funcionamiento](/readmeAssets/MELI.gif)
+
+## Endpoints
+
+### https://mercadolibre-one.vercel.app/api/items/MLA1129298029
+
+![Gif funcionamiento](/readmeAssets/endpointItemId.png)
+
+### https://mercadolibre-one.vercel.app/api/items?q=ipad
+
+![Gif funcionamiento](/readmeAssets/endpointSearch.png)
+
 
 ## Características
 La aplicación permite realizar búsquedas de productos ingresando términos en la caja de búsqueda.
@@ -11,23 +24,20 @@ Al hacer clic en uno de los productos, se navega a la vista de Detalle de Produc
 También se proporciona la funcionalidad de ingresar directamente a la vista de detalle de producto utilizando su ID.
 
 ## Tecnologías utilizadas
-### Front-end:
 
-React: Biblioteca de JavaScript utilizada para construir la interfaz de usuario.
-
-HTML: Lenguaje de marcado para estructurar y presentar el contenido de la aplicación.
-
-CSS: Lenguaje de estilos utilizado para dar estilo y diseño a la aplicación.
-
-### Servidor:
-
-Node.js: Entorno de tiempo de ejecución de JavaScript del lado del servidor.
-
-Express: Framework web de Node.js utilizado para crear y manejar las rutas y endpoints del servidor.
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" **alt="Git" width="40" height="40"/>
+</div>
 
 ## Instalación
-1. Clona este repositorio en tu máquina local.
-2. Navega al directorio del proyecto
-3. Instala las dependencias del cliente y del servidor ejecutando npm install en la raíz del proyecto.
-3. Inicia el servidor ejecutando npm start en la raíz del proyecto.
-4. Abre tu navegador y accede a http://localhost:3000 para ver la aplicación en funcionamiento.
+1. Clonar este repositorio.
+2. Navegar al directorio del proyecto.
+3. Instalar dependencias del cliente y del servidor ejecutando npm install.
+3. Iniciar el servidor ejecutando npm run start.
+    - Correr el front en el PORT 3000.
+4. Abrir el navegador y acceder a http://localhost:3000 para ver la aplicación en funcionamiento.
