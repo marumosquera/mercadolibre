@@ -4,7 +4,7 @@ import { BreadcrumbList } from "./BreadcrumbList";
 
 export const BreadcrumbSearch = ({ categories }) => {
   return (
-    <div className="breadcrumb" itemType="https://schema.org/BreadcrumbList">
+    <section className="breadcrumb" itemType="https://schema.org/BreadcrumbList" aria-label="Breadcrumb de la busqueda">
       {categories.map((category, index) => {
         const isLastCategory = index === categories.length - 1;
         return (
@@ -16,6 +16,6 @@ export const BreadcrumbSearch = ({ categories }) => {
           />
         );
       })}
-    </div>
+    </section>
   );
 };

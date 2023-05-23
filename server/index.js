@@ -21,3 +21,11 @@ app.use(function(req, res, next) {
 // Rutas
 const apiRoutes = require("./routes/api");
 app.use("/api", apiRoutes);
+
+// Puerto de escucha
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Servidor escuchando en el puerto ${port}`);
+});
+
+// module.exports = app;

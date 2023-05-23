@@ -34,7 +34,7 @@ export const ItemDetailContainer = () => {
   return (
     <>
       {!isLoading && (
-        <div >
+        <article >
           <div className="item-detail-listado">
             <span className="span-listado-breadcrumb" onClick={goBackToQuery}>
               Volver al listado{" "}
@@ -44,7 +44,7 @@ export const ItemDetailContainer = () => {
           <div className="item-detail-container">
             <ItemDetail product={product} />
           </div>
-        </div>
+        </article>
       )}
     </>
   );

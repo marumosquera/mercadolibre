@@ -39,7 +39,7 @@ export const SearchBar = ({ placeholder }) => {
   };
 
   return (
-    <div className="search">
+    <section className="search" aria-label="Caja de busqueda">
       <form onSubmit={handleSearchQuery}>
         <input
           type="text"
@@ -52,6 +52,6 @@ export const SearchBar = ({ placeholder }) => {
           <TfiSearch />
         </button>
       </form>
-    </div>
+    </section>
   );
 };

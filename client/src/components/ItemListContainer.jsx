@@ -48,7 +48,7 @@ export const ItemListContainer = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <article>
       {!isLoading ? (
         products.length > 0 ? (
           <>
@@ -72,6 +72,6 @@ export const ItemListContainer = () => {
           />
         )
       ) : null}
-    </div>
+    </article>
   );
 };

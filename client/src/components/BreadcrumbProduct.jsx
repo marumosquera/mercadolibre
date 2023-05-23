@@ -22,7 +22,7 @@ export const BreadcrumbProduct = ({ categoryId }) => {
   }, [categoryId]);     
 
   return (
-    <div className="breadcrumb-product" itemType="https://schema.org/BreadcrumbList">
+    <section className="breadcrumb-product" itemType="https://schema.org/BreadcrumbList" aria-label="Breadcrumb del producto">
       {categories?.map((category, index) => {
         const isLastCategory = index === categories?.length - 1;
         return (
@@ -34,6 +34,6 @@ export const BreadcrumbProduct = ({ categoryId }) => {
           />
         );
       })}
-    </div>
+    </section>
   );
 };
